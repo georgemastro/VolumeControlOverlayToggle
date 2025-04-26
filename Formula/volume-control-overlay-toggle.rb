@@ -1,27 +1,11 @@
-class VolumeControlOverlayToggle < Formula
+cask "volume-control-overlay-toggle" do
+  version "1.0.5"
+  sha256 "402f6a48cf6c41dd53f8b767e1dfebce122dceb0966ac5d605e4d0a73262433f"
+
+  url "https://github.com/georgemastro/VolumeControlOverlayToggle/releases/download/v1.0.5/VolumeControlOverlayToggle.zip"
+  name "VolumeControlOverlayToggle"
   desc "A simple macOS menu bar app to toggle the volume control overlay"
   homepage "https://github.com/georgemastro/VolumeControlOverlayToggle"
-  url "https://github.com/georgemastro/VolumeControlOverlayToggle/archive/refs/tags/v1.0.3.tar.gz"
-  sha256 "966317f1c0ddc80e4bc9d5d4fcc12ac20487f7a033f8542f2e2917478eff062b"
-  version "1.0.3"
-  
-  depends_on xcode: ["12.0", :build]
-  depends_on macos: :big_sur
 
-  def install
-    system "swift", "build", "-c", "release", "--disable-sandbox"
-    bin.install ".build/release/VolumeControlOverlayToggle"
-  end
-
-  service do
-    run [opt_bin/"VolumeControlOverlayToggle"]
-    keep_alive true
-    log_path var/"log/volume-control-overlay-toggle.log"
-    error_log_path var/"log/volume-control-overlay-toggle.log"
-    environment_variables PATH: std_service_path_env
-  end
-
-  test do
-    assert_predicate bin/"VolumeControlOverlayToggle", :exist?
-  end
-end 
+  app "VolumeControlOverlayToggle.app"
+end
