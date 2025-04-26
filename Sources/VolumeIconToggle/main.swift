@@ -17,13 +17,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         let menu = NSMenu()
-        let toggleMenuItem = NSMenuItem(title: "Toggle Volume Control Overlay", action: #selector(toggleVolumeIcon), keyEquivalent: "T")
+        let toggleMenuItem = NSMenuItem(title: "Toggle Volume Control Overlay", action: #selector(toggleVolumeIcon), keyEquivalent: "O")
         toggleMenuItem.keyEquivalentModifierMask = [.command, .option, .shift]
         menu.addItem(toggleMenuItem)
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         
         statusItem.menu = menu
+
+        // Add left/right click behavior
+        if let button = statusItem.button {
+            button.target = self
+            button.action = #selector(statusItemClicked(_:))
+        }
     }
     
     private func checkCurrentState() {
@@ -64,6 +70,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             updateIcon()
         } catch {
             print("Error toggling volume icon: \(error)")
+        }
+    }
+    
+    @objc private func statusItemClicked(_ sender: Any?) {
+        let event = NSApp.currentEvent
+        if event?.type == .rightMouseUp || event?.type == .rightMouseDown {
+            statusItem.popUpMenu(statusItem.menu!)
+        } else {
+            toggleVolumeIcon()
         }
     }
     
