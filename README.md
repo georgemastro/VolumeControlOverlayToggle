@@ -1,14 +1,16 @@
-# VolumeControlOverlayToggle
+# MacOS Volume Control Overlay Toggle
 
 Buy Me a Coffee: [buymeacoffee.com/georgemastro](https://buymeacoffee.com/georgemastro)
 
-A simple macOS menu bar application that allows you to quickly toggle the visibility of the system volume control overlay in the menu bar.
+Have you ever watched a cool movie on a Mac and you were distracted by the Volume Overlay every time you change the volume because your kid is sleeping and you do it all the time?
+
+Well, this is a simple MacOS menu bar application that allows you to quickly toggle the visibility of the system volume control overlay in the menu bar.
 
 ## Features
 
 - Toggle the volume overlay with a single click
 - Menu bar icon indicates current state (filled when overlay is visible)
-- Global keyboard shortcut (⌘⌥⇧O) for quick toggling
+- Global keyboard shortcut (⌘⌥⇧ + O) for quick toggling
 - Minimal and unobtrusive interface
 
 ## Requirements
@@ -73,7 +75,7 @@ killall SystemUIServer
 
 ## License
 
-This project is open source and available under the MIT License.
+This project is open source and available under the GNU General Public License.
 
 ## Contributing
 
