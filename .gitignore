@@ -4,4 +4,4 @@ xcuserdata/
 *.xcodeproj/
 DerivedData/
 .swiftpm/
-*.xcworkspace/ 
+*.xcworkspace/ .build/
