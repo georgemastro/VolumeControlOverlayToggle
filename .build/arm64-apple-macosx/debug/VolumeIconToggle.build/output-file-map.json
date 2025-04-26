@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/master.swiftdeps"
+  },
+  "/Users/mastro/VolumeIconToggle/Sources/VolumeIconToggle/main.swift": {
+    "dependencies": "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/main.d",
+    "object": "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/main.swift.o",
+    "swiftmodule": "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/main.swiftdeps"
+  }
+}

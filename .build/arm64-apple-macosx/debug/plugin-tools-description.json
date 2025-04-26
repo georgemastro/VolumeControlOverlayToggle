@@ -1,0 +1,222 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.VolumeIconToggle-arm64-apple-macosx15.0-debug.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/sources",
+      "importPath" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/VolumeIconToggle/Sources/VolumeIconToggle/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "VolumeIconToggle",
+      "moduleOutputPath" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/Modules/VolumeIconToggle.swiftmodule",
+      "objects" : [
+        "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx12.0",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j12",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "VolumeIconToggle_main",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-swift-version",
+        "5",
+        "-F",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g"
+      ],
+      "outputFileMapPath" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/Modules/VolumeIconToggle.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/mastro/VolumeIconToggle/Sources/VolumeIconToggle/main.swift"
+      ],
+      "tempsPath" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "VolumeIconToggle" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "VolumeIconToggle",
+      "-incremental",
+      "-c",
+      "/Users/mastro/VolumeIconToggle/Sources/VolumeIconToggle/main.swift",
+      "-I",
+      "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx12.0",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j12",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "VolumeIconToggle_main",
+      "-parse-as-library",
+      "-color-diagnostics",
+      "-swift-version",
+      "5",
+      "-F",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "VolumeIconToggle" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "enableAllTraits" : false
+  },
+  "writeCommands" : {
+    "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle-entitlement.plist" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<entitlement-plist>"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<com.apple.security.get-task-allow>"
+        }
+      ],
+      "outputFilePath" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle-entitlement.plist"
+    },
+    "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/VolumeIconToggle/Sources/VolumeIconToggle/main.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/sources"
+    },
+    "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/main.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.product/Objects.LinkFileList"
+    },
+    "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+    }
+  }
+}
