@@ -1,12 +1,12 @@
-# VolumeIconToggle
+# VolumeControlOverlayToggle
 
-A simple macOS menu bar application that allows you to quickly toggle the visibility of the system volume icon in the menu bar.
+A simple macOS menu bar application that allows you to quickly toggle the visibility of the system volume control overlay in the menu bar.
 
 ## Features
 
-- Toggle the volume icon with a single click
-- Menu bar icon indicates current state (filled when volume icon is visible)
-- Keyboard shortcut (⌘T) for quick toggling
+- Toggle the volume overlay with a single click
+- Menu bar icon indicates current state (filled when overlay is visible)
+- Global keyboard shortcut (⌘⌥⇧O) for quick toggling
 - Minimal and unobtrusive interface
 
 ## Requirements
@@ -18,42 +18,43 @@ A simple macOS menu bar application that allows you to quickly toggle the visibi
 ### Using Homebrew
 
 ```bash
-brew tap georgemastro/VolumeIconToggle
-brew install volume-icon-toggle
-brew services start volume-icon-toggle
+brew tap georgemastro/VolumeControlOverlayToggle
+brew install volume-control-overlay-toggle
 ```
 
 ### Building from Source
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/georgemastro/VolumeIconToggle.git
-cd VolumeIconToggle
+git clone https://github.com/georgemastro/VolumeControlOverlayToggle.git
+cd VolumeControlOverlayToggle
 ```
 
 2. Build and install:
 ```bash
 swift build -c release
-sudo cp .build/release/VolumeIconToggle /usr/local/bin/
+sudo cp .build/release/VolumeControlOverlayToggle /usr/local/bin/
 ```
 
 3. Run the application:
 ```bash
-VolumeIconToggle
+VolumeControlOverlayToggle
 ```
 
 ## Usage
 
 ### Menu Bar Controls
 
-- Click the menu bar icon to access:
-  - Toggle Volume Icon (⌘T)
+- Left-click the menu bar icon to toggle the overlay
+- Right-click the menu bar icon to access:
+  - Toggle Volume Control Overlay (⌘⌥⇧O)
+  - Start at Login
   - Quit (⌘Q)
 
 ### Icon States
 
-- Filled speaker icon: Volume icon is currently visible
-- Regular speaker icon: Volume icon is currently hidden
+- Filled speaker icon: Overlay is currently visible
+- Regular speaker icon: Overlay is currently hidden
 
 ## Troubleshooting
 
@@ -61,7 +62,7 @@ If the toggle doesn't work:
 
 1. Make sure you have the necessary permissions:
    - System Settings > Privacy & Security > Accessibility
-   - Add VolumeIconToggle to the list of allowed applications
+   - Add VolumeControlOverlayToggle to the list of allowed applications
 
 2. Try restarting the SystemUIServer manually:
 ```bash

@@ -17,49 +17,180 @@
 
   ],
   "swiftCommands" : {
-    "C.VolumeIconToggle-arm64-apple-macosx15.0-debug.module" : {
+    "C.HotKey-arm64-apple-macosx15.0-debug.module" : {
       "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
-      "fileList" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/sources",
-      "importPath" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/Modules",
+      "fileList" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/sources",
+      "importPath" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/Modules",
       "inputs" : [
         {
           "kind" : "file",
-          "name" : "/Users/mastro/VolumeIconToggle/Sources/VolumeIconToggle/main.swift"
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/HotKey.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/HotKeysController.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/sources"
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/Key.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/KeyCombo+System.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/KeyCombo.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/NSEventModifierFlags+HotKey.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/sources"
         }
       ],
-      "isLibrary" : false,
-      "moduleName" : "VolumeIconToggle",
-      "moduleOutputPath" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/Modules/VolumeIconToggle.swiftmodule",
+      "isLibrary" : true,
+      "moduleName" : "HotKey",
+      "moduleOutputPath" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/Modules/HotKey.swiftmodule",
       "objects" : [
-        "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/main.swift.o"
+        "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/HotKey.swift.o",
+        "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/HotKeysController.swift.o",
+        "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/Key.swift.o",
+        "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/KeyCombo+System.swift.o",
+        "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/KeyCombo.swift.o",
+        "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/NSEventModifierFlags+HotKey.swift.o"
       ],
       "otherArguments" : [
         "-target",
-        "arm64-apple-macosx12.0",
+        "arm64-apple-macosx10.13",
         "-enable-batch-mode",
         "-index-store-path",
-        "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/index/store",
+        "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/index/store",
         "-Onone",
         "-enable-testing",
         "-j12",
         "-DSWIFT_PACKAGE",
         "-DDEBUG",
         "-module-cache-path",
-        "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/ModuleCache",
+        "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/HotKey-Swift.h",
+        "-color-diagnostics",
+        "-swift-version",
+        "5",
+        "-F",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-suppress-warnings"
+      ],
+      "outputFileMapPath" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/HotKey.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/HotKeysController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/Key.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/KeyCombo+System.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/KeyCombo.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/NSEventModifierFlags+HotKey.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/Modules/HotKey.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/HotKey.swift",
+        "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/HotKeysController.swift",
+        "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/Key.swift",
+        "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/KeyCombo+System.swift",
+        "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/KeyCombo.swift",
+        "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/NSEventModifierFlags+HotKey.swift"
+      ],
+      "tempsPath" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.VolumeIconToggle-arm64-apple-macosx15.0-debug.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/sources",
+      "importPath" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/Sources/VolumeIconToggle/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/Modules/HotKey.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "VolumeIconToggle",
+      "moduleOutputPath" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/Modules/VolumeIconToggle.swiftmodule",
+      "objects" : [
+        "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx11.0",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j12",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/ModuleCache",
         "-parseable-output",
         "-Xfrontend",
         "-entry-point-function-name",
         "-Xfrontend",
         "VolumeIconToggle_main",
-        "-parse-as-library",
         "-color-diagnostics",
         "-swift-version",
         "5",
@@ -77,22 +208,22 @@
         "-Xcc",
         "-g"
       ],
-      "outputFileMapPath" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/output-file-map.json",
+      "outputFileMapPath" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/output-file-map.json",
       "outputs" : [
         {
           "kind" : "file",
-          "name" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/main.swift.o"
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/main.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/Modules/VolumeIconToggle.swiftmodule"
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/Modules/VolumeIconToggle.swiftmodule"
         }
       ],
       "prepareForIndexing" : false,
       "sources" : [
-        "/Users/mastro/VolumeIconToggle/Sources/VolumeIconToggle/main.swift"
+        "/Users/mastro/code/VolumeIconToggle/Sources/VolumeIconToggle/main.swift"
       ],
-      "tempsPath" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build",
+      "tempsPath" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build",
       "wholeModuleOptimization" : false
     }
   },
@@ -100,33 +231,83 @@
 
   },
   "swiftTargetScanArgs" : {
-    "VolumeIconToggle" : [
+    "HotKey" : [
       "/Library/Developer/CommandLineTools/usr/bin/swiftc",
       "-module-name",
-      "VolumeIconToggle",
+      "HotKey",
       "-incremental",
       "-c",
-      "/Users/mastro/VolumeIconToggle/Sources/VolumeIconToggle/main.swift",
+      "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/HotKey.swift",
+      "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/HotKeysController.swift",
+      "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/Key.swift",
+      "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/KeyCombo+System.swift",
+      "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/KeyCombo.swift",
+      "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/NSEventModifierFlags+HotKey.swift",
       "-I",
-      "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/Modules",
+      "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/Modules",
       "-target",
-      "arm64-apple-macosx12.0",
+      "arm64-apple-macosx10.13",
       "-enable-batch-mode",
       "-index-store-path",
-      "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/index/store",
+      "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/index/store",
       "-Onone",
       "-enable-testing",
       "-j12",
       "-DSWIFT_PACKAGE",
       "-DDEBUG",
       "-module-cache-path",
-      "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/ModuleCache",
+      "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/HotKey-Swift.h",
+      "-color-diagnostics",
+      "-swift-version",
+      "5",
+      "-F",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-suppress-warnings",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ],
+    "VolumeIconToggle" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "VolumeIconToggle",
+      "-incremental",
+      "-c",
+      "/Users/mastro/code/VolumeIconToggle/Sources/VolumeIconToggle/main.swift",
+      "-I",
+      "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx11.0",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j12",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/ModuleCache",
       "-parseable-output",
       "-Xfrontend",
       "-entry-point-function-name",
       "-Xfrontend",
       "VolumeIconToggle_main",
-      "-parse-as-library",
       "-color-diagnostics",
       "-swift-version",
       "5",
@@ -148,8 +329,11 @@
     ]
   },
   "targetDependencyMap" : {
-    "VolumeIconToggle" : [
+    "HotKey" : [
 
+    ],
+    "VolumeIconToggle" : [
+      "HotKey"
     ]
   },
   "testDiscoveryCommands" : {
@@ -162,7 +346,41 @@
     "enableAllTraits" : false
   },
   "writeCommands" : {
-    "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle-entitlement.plist" : {
+    "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/HotKey.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/HotKeysController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/Key.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/KeyCombo+System.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/KeyCombo.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/checkouts/HotKey/Sources/HotKey/NSEventModifierFlags+HotKey.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/sources"
+    },
+    "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle-entitlement.plist" : {
       "alwaysOutOfDate" : false,
       "inputs" : [
         {
@@ -174,9 +392,9 @@
           "name" : "<com.apple.security.get-task-allow>"
         }
       ],
-      "outputFilePath" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle-entitlement.plist"
+      "outputFilePath" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle-entitlement.plist"
     },
-    "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/sources" : {
+    "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/sources" : {
       "alwaysOutOfDate" : false,
       "inputs" : [
         {
@@ -185,12 +403,12 @@
         },
         {
           "kind" : "file",
-          "name" : "/Users/mastro/VolumeIconToggle/Sources/VolumeIconToggle/main.swift"
+          "name" : "/Users/mastro/code/VolumeIconToggle/Sources/VolumeIconToggle/main.swift"
         }
       ],
-      "outputFilePath" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/sources"
+      "outputFilePath" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/sources"
     },
-    "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.product/Objects.LinkFileList" : {
+    "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.product/Objects.LinkFileList" : {
       "alwaysOutOfDate" : false,
       "inputs" : [
         {
@@ -199,12 +417,36 @@
         },
         {
           "kind" : "file",
-          "name" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/main.swift.o"
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/HotKey.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/HotKeysController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/Key.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/KeyCombo+System.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/KeyCombo.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/HotKey.build/NSEventModifierFlags+HotKey.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.build/main.swift.o"
         }
       ],
-      "outputFilePath" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.product/Objects.LinkFileList"
+      "outputFilePath" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/VolumeIconToggle.product/Objects.LinkFileList"
     },
-    "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt" : {
+    "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt" : {
       "alwaysOutOfDate" : true,
       "inputs" : [
         {
@@ -216,7 +458,7 @@
           "name" : "/Library/Developer/CommandLineTools/usr/bin/swiftc"
         }
       ],
-      "outputFilePath" : "/Users/mastro/VolumeIconToggle/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+      "outputFilePath" : "/Users/mastro/code/VolumeIconToggle/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
     }
   }
 }

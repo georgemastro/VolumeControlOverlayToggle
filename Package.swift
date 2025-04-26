@@ -2,17 +2,22 @@
 import PackageDescription
 
 let package = Package(
-    name: "VolumeIconToggle",
+    name: "VolumeControlOverlayToggle",
     platforms: [
         .macOS(.v11)
     ],
     products: [
-        .executable(name: "VolumeIconToggle", targets: ["VolumeIconToggle"])
+        .executable(name: "VolumeControlOverlayToggle", targets: ["VolumeControlOverlayToggle"])
+    ],
+    dependencies: [
+        .package(url: "https://github.com/soffes/HotKey.git", from: "0.1.4")
     ],
     targets: [
         .executableTarget(
-            name: "VolumeIconToggle",
-            dependencies: []
+            name: "VolumeControlOverlayToggle",
+            dependencies: [
+                .product(name: "HotKey", package: "HotKey")
+            ]
         )
     ]
 ) 
