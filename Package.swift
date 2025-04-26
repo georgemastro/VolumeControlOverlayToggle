@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "VolumeIconToggle",
     platforms: [
-        .macOS(.v13)
+        .macOS(.v11)
     ],
     products: [
         .executable(name: "VolumeIconToggle", targets: ["VolumeIconToggle"])

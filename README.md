@@ -11,7 +11,7 @@ A simple macOS menu bar application that allows you to quickly toggle the visibi
 
 ## Requirements
 
-- macOS 13.0 or later
+- macOS 11.0 (Big Sur) or later
 
 ## Installation
 

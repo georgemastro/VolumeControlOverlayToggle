@@ -13,7 +13,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         
         if let button = statusItem.button {
-            button.image = NSImage(systemSymbolName: "speaker.fill", accessibilityDescription: "Volume Icon Toggle")
+            if #available(macOS 11.0, *) {
+                button.image = NSImage(systemSymbolName: "speaker.wave.2", accessibilityDescription: "Volume Icon")
+            } else {
+                button.image = NSImage(named: NSImage.volumeUpTemplateName)
+            }
         }
         
         let menu = NSMenu()
@@ -39,6 +43,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if let output = String(data: data, encoding: .utf8) {
                 isVolumeIconVisible = output.contains("/System/Library/CoreServices/Menu Extras/Volume.menu")
                 updateMenuItemTitle()
+                updateIcon()
             }
         } catch {
             print("Error checking volume icon state: \(error)")
@@ -69,6 +74,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             
             isVolumeIconVisible.toggle()
             updateMenuItemTitle()
+            updateIcon()
         } catch {
             print("Error toggling volume icon: \(error)")
         }
@@ -77,6 +83,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private func updateMenuItemTitle() {
         if let menuItem = statusItem.menu?.item(at: 0) {
             menuItem.title = isVolumeIconVisible ? "Hide Volume Icon" : "Show Volume Icon"
+        }
+    }
+    
+    private func updateIcon() {
+        if let button = statusItem.button {
+            if #available(macOS 11.0, *) {
+                button.image = NSImage(systemSymbolName: isVolumeIconVisible ? "speaker.wave.2.fill" : "speaker.wave.2",
+                                    accessibilityDescription: "Volume Icon")
+            } else {
+                button.image = NSImage(named: isVolumeIconVisible ? NSImage.volumeUpTemplateName : NSImage.volumeOffTemplateName)
+            }
         }
     }
 }

@@ -4,8 +4,8 @@ class VolumeIconToggle < Formula
   url "https://github.com/georgemastro/VolumeIconToggle.git"
   version "1.0.0"
   
-  depends_on xcode: ["13.0", :build]
-  depends_on macos: ["13.0"]
+  depends_on xcode: ["12.0", :build]
+  depends_on macos: ["11.0"]
 
   def install
     system "swift", "build", "--configuration", "release"
