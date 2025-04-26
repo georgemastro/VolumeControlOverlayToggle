@@ -21,7 +21,7 @@ A simple macOS menu bar application that allows you to quickly toggle the visibi
 
 ```bash
 brew tap georgemastro/VolumeControlOverlayToggle
-brew install volume-control-overlay-toggle
+brew install --cask volume-control-overlay-toggle
 ```
 
 ### Building from Source
