@@ -13,11 +13,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         
         if let button = statusItem.button {
-            if #available(macOS 11.0, *) {
-                button.image = NSImage(systemSymbolName: "speaker.wave.2", accessibilityDescription: "Volume Icon")
-            } else {
-                button.image = NSImage(named: NSImage.volumeUpTemplateName)
-            }
+            button.image = NSImage(systemSymbolName: "speaker.wave.2", accessibilityDescription: "Volume Icon")
         }
         
         let menu = NSMenu()
@@ -88,12 +84,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     private func updateIcon() {
         if let button = statusItem.button {
-            if #available(macOS 11.0, *) {
-                button.image = NSImage(systemSymbolName: isVolumeIconVisible ? "speaker.wave.2.fill" : "speaker.wave.2",
-                                    accessibilityDescription: "Volume Icon")
-            } else {
-                button.image = NSImage(named: isVolumeIconVisible ? NSImage.volumeUpTemplateName : NSImage.volumeOffTemplateName)
-            }
+            button.image = NSImage(systemSymbolName: isVolumeIconVisible ? "speaker.wave.2.fill" : "speaker.wave.2",
+                                 accessibilityDescription: "Volume Icon")
         }
     }
 }
