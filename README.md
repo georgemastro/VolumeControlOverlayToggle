@@ -1,6 +1,6 @@
 # VolumeControlOverlayToggle
 
-Buy Me a Coffee: buymeacoffee.com/georgemastro
+Buy Me a Coffee: [buymeacoffee.com/georgemastro](https://buymeacoffee.com/georgemastro)
 
 A simple macOS menu bar application that allows you to quickly toggle the visibility of the system volume control overlay in the menu bar.
 

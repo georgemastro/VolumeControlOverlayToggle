@@ -1,6 +1,11 @@
 import Cocoa
 import HotKey
 
+// Single-instance check: exit if another instance is running
+if NSRunningApplication.runningApplications(withBundleIdentifier: Bundle.main.bundleIdentifier!).count > 1 {
+    NSApp.terminate(nil)
+}
+
 class AppDelegate: NSObject, NSApplicationDelegate {
     private var statusItem: NSStatusItem!
     private var isVolumeIconVisible = true
