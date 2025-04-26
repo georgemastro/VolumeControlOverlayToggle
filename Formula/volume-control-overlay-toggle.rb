@@ -1,9 +1,9 @@
 class VolumeControlOverlayToggle < Formula
   desc "A simple macOS menu bar app to toggle the volume control overlay"
   homepage "https://github.com/georgemastro/VolumeControlOverlayToggle"
-  url "https://github.com/georgemastro/VolumeControlOverlayToggle/archive/refs/tags/v1.0.2.tar.gz"
-  sha256 "a2817f28fb78089e75c00ef72c3eb96697a83a80bc83747d37c01622bc9c1dff"
-  version "1.0.2"
+  url "https://github.com/georgemastro/VolumeControlOverlayToggle/archive/refs/tags/v1.0.3.tar.gz"
+  sha256 "966317f1c0ddc80e4bc9d5d4fcc12ac20487f7a033f8542f2e2917478eff062b"
+  version "1.0.3"
   
   depends_on xcode: ["12.0", :build]
   depends_on macos: :big_sur
