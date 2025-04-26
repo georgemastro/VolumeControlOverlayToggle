@@ -17,7 +17,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         let menu = NSMenu()
-        menu.addItem(NSMenuItem(title: "Toggle Volume Icon", action: #selector(toggleVolumeIcon), keyEquivalent: "t"))
+        let toggleMenuItem = NSMenuItem(title: "Toggle Volume Control Overlay", action: #selector(toggleVolumeIcon), keyEquivalent: "T")
+        toggleMenuItem.keyEquivalentModifierMask = [.command, .option, .shift]
+        menu.addItem(toggleMenuItem)
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         
@@ -25,19 +27,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     private func checkCurrentState() {
-        // Check if the volume icon is currently visible
+        // Check if the volume icon is currently visible by checking if OSDUIHelper is loaded
         let task = Process()
-        task.launchPath = "/usr/bin/defaults"
-        task.arguments = ["read", "com.apple.systemuiserver", "menuExtras"]
-        
+        task.launchPath = "/bin/launchctl"
+        task.arguments = ["list"]
         let pipe = Pipe()
         task.standardOutput = pipe
-        
         do {
             try task.run()
             let data = pipe.fileHandleForReading.readDataToEndOfFile()
             if let output = String(data: data, encoding: .utf8) {
-                isVolumeIconVisible = output.contains("/System/Library/CoreServices/Menu Extras/Volume.menu")
+                isVolumeIconVisible = output.contains("com.apple.OSDUIHelper")
                 updateMenuItemTitle()
                 updateIcon()
             }
@@ -48,26 +48,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc private func toggleVolumeIcon() {
         let task = Process()
-        task.launchPath = "/usr/bin/defaults"
-        
+        task.launchPath = "/bin/launchctl"
         if isVolumeIconVisible {
             // Remove volume icon
-            task.arguments = ["delete", "com.apple.systemuiserver", "menuExtras"]
+            task.arguments = ["unload", "-F", "/System/Library/LaunchAgents/com.apple.OSDUIHelper.plist"]
         } else {
-            // Add volume icon
-            task.arguments = ["write", "com.apple.systemuiserver", "menuExtras", "-array-add", "/System/Library/CoreServices/Menu Extras/Volume.menu"]
+            // Show volume icon
+            task.arguments = ["load", "-F", "/System/Library/LaunchAgents/com.apple.OSDUIHelper.plist"]
         }
-        
         do {
             try task.run()
             task.waitUntilExit()
-            
-            // Restart SystemUIServer to apply changes
-            let restartTask = Process()
-            restartTask.launchPath = "/usr/bin/killall"
-            restartTask.arguments = ["SystemUIServer"]
-            try restartTask.run()
-            
             isVolumeIconVisible.toggle()
             updateMenuItemTitle()
             updateIcon()
@@ -78,7 +69,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     private func updateMenuItemTitle() {
         if let menuItem = statusItem.menu?.item(at: 0) {
-            menuItem.title = isVolumeIconVisible ? "Hide Volume Icon" : "Show Volume Icon"
+            menuItem.title = isVolumeIconVisible ? "Hide Volume Control Overlay" : "Show Volume Control Overlay"
         }
     }
     
