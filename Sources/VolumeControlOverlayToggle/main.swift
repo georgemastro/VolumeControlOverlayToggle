@@ -1,5 +1,6 @@
 import Cocoa
 import HotKey
+import AVFoundation
 
 // Single-instance check: exit if another instance is running
 if NSRunningApplication.runningApplications(withBundleIdentifier: Bundle.main.bundleIdentifier!).count > 1 {
@@ -18,12 +19,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return (NSHomeDirectory() as NSString).appendingPathComponent("Library/LaunchAgents/\(launchAgentId).plist")
     }
     
+    // --- Add these properties for polling ---
+    private var volumePollTimer: Timer?
+    private var lastVolume: Int = -1
+    // ----------------------------------------
+    
     func applicationDidFinishLaunching(_ notification: Notification) {
         setupMenuBar()
         setupHotKey()
         setupRightClickMonitor()
         checkCurrentState()
         updateStartAtLoginMenuItem()
+        // No need to start polling here; handled in checkCurrentState
     }
     
     private func setupMenuBar() {
@@ -83,6 +90,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 isVolumeIconVisible = output.contains("com.apple.OSDUIHelper")
                 updateMenuItemTitle()
                 updateIcon()
+                // --- Start/stop polling based on overlay state ---
+                if isVolumeIconVisible {
+                    stopVolumePolling()
+                } else {
+                    startVolumePolling()
+                }
+                // ------------------------------------------------
             }
         } catch {
             print("Error checking volume icon state: \(error)")
@@ -105,6 +119,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             isVolumeIconVisible.toggle()
             updateMenuItemTitle()
             updateIcon()
+            // --- Start/stop polling based on overlay state ---
+            if isVolumeIconVisible {
+                stopVolumePolling()
+            } else {
+                startVolumePolling()
+            }
+            // ------------------------------------------------
         } catch {
             print("Error toggling volume icon: \(error)")
         }
@@ -183,8 +204,62 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private func updateIcon() {
         if let button = statusItem.button {
             button.image = NSImage(systemSymbolName: isVolumeIconVisible ? "speaker.wave.2.fill" : "speaker.wave.2",
-                                 accessibilityDescription: "Volume Icon")
+                                   accessibilityDescription: "Volume Icon")
+            if !isVolumeIconVisible {
+                let volume = lastVolume == -1 ? getSystemVolumePercentage() : lastVolume
+                let percentageString = "\(volume)%"
+                let attributed = NSMutableAttributedString(string: percentageString)
+                attributed.addAttribute(.font, value: NSFont.systemFont(ofSize: 9), range: NSRange(location: 0, length: percentageString.count))
+                attributed.addAttribute(.baselineOffset, value: -1, range: NSRange(location: 0, length: percentageString.count))
+                button.attributedTitle = attributed
+            } else {
+                button.title = ""
+                button.attributedTitle = NSAttributedString(string: "")
+            }
         }
+    }
+    
+    // --- Add these functions for polling ---
+    private func startVolumePolling() {
+        stopVolumePolling() // Ensure no duplicate timers
+        lastVolume = getSystemVolumePercentage()
+        volumePollTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] _ in
+            self?.checkAndUpdateVolume()
+        }
+    }
+
+    private func stopVolumePolling() {
+        volumePollTimer?.invalidate()
+        volumePollTimer = nil
+    }
+
+    private func checkAndUpdateVolume() {
+        guard !isVolumeIconVisible else { return }
+        let currentVolume = getSystemVolumePercentage()
+        if currentVolume != lastVolume {
+            lastVolume = currentVolume
+            updateIcon()
+        }
+    }
+    // --------------------------------------
+    
+    private func getSystemVolumePercentage() -> Int {
+        let task = Process()
+        task.launchPath = "/usr/bin/osascript"
+        task.arguments = ["-e", "output volume of (get volume settings)"]
+        let pipe = Pipe()
+        task.standardOutput = pipe
+        do {
+            try task.run()
+            let data = pipe.fileHandleForReading.readDataToEndOfFile()
+            if let output = String(data: data, encoding: .utf8),
+               let value = Int(output.trimmingCharacters(in: .whitespacesAndNewlines)) {
+                return value
+            }
+        } catch {
+            print("Error getting system volume: \(error)")
+        }
+        return -1
     }
 }
 
